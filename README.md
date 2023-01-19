@@ -26,13 +26,13 @@ This project is a 3D VR archery program made in Unity using Unity's XR framework
 
 ## Screenshots
 
-![sample_level_screenshot](assets/Screenshots/1%20-%20Holding%20Bow.jpg)
-![sample_level_screenshot](assets/Screenshots/2%20-%20Holding%20Arrow.jpg)
-![sample_level_screenshot](assets/Screenshots/3%20-%20Arrow%20Attached.jpg)
-![sample_level_screenshot](assets/Screenshots/4%20-%20Arrow%20Release.jpg)
-![sample_level_screenshot](assets/Screenshots/5%20-%20First%20Star%20Shot.jpg)
-![sample_level_screenshot](assets/Screenshots/6%20-%20Second%20Star%20Shot.jpg)
-![sample_level_screenshot](assets/Screenshots/7%20-%20All%20Stars%20Shot.PNG)
+![1_holding_bow](/Assets/Screenshots/1%20-%20Holding%20Bow.jpg)
+![2_holding_arrow](/Assets/Screenshots/2%20-%20Holding%20Arrow.jpg)
+![3_arrow_attached](/Assets/Screenshots/3%20-%20Arrow%20Attached.jpg)
+![4_arrow_release](/Assets/Screenshots/4%20-%20Arrow%20Release.jpg)
+![5_first_star_shot](/Assets/Screenshots/5%20-%20First%20Star%20Shot.jpg)
+![6_second_star_shot](/Assets/Screenshots/6%20-%20Second%20Star%20Shot.jpg)
+![7_all_stars_shot](/Assets/Screenshots/7%20-%20All%20Stars%20Shot.PNG)
 
 ## More features to come!
 
