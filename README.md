@@ -45,7 +45,7 @@ This project is a 3D VR archery program made in Unity using Unity's XR framework
 ## Software used
 
 - Project built with Unity
-- Unity, version 2019.4.16f1 - https://phaser.io/
+- Unity, version 2019.4.16f1
 - Unity Package- XR Interaction Toolkit 0.9.4-preview
 - Unity Package- Occulus XR Plugin 1.6.1
 - Unity Package- XR Plugin Management 4.3.1
