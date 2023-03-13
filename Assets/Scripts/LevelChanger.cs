@@ -18,7 +18,15 @@ public class LevelChanger : MonoBehaviour
     /// </summary>
     public void LoadNextScene()
     {
-        StartCoroutine(GoToSceneAsyncRoutine(fadeScreen.fadeDuration));
+        StartCoroutine(GoToSceneAsyncRoutine(SceneManager.GetActiveScene().buildIndex + 1, fadeScreen.fadeDuration));
+    }
+
+    /// <summary>
+    /// Loads the first scene in the build
+    /// </summary>
+    public void LoadMainMenu()
+    {
+        StartCoroutine(GoToSceneAsyncRoutine(0, fadeScreen.fadeDuration));
     }
 
     /// <summary>
@@ -26,10 +34,10 @@ public class LevelChanger : MonoBehaviour
     /// Creates a fade transition and loads the next scene.
     /// </summary>
     /// <returns></returns>
-    IEnumerator GoToSceneAsyncRoutine(float transitionTime)
+    IEnumerator GoToSceneAsyncRoutine(int sceneNumber, float transitionTime)
     {
         fadeScreen.FadeOut();
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneNumber);
         operation.allowSceneActivation = false;
 
         float timer = 0;

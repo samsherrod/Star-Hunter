@@ -15,8 +15,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
     [Tooltip("The main page of the pause menu")]
     [SerializeField] private GameObject mainPage;
-    [Tooltip("The instructions page of the pause menu")]
-    [SerializeField] private GameObject insructionsPage;
+    [Tooltip("The first instructions page of the pause menu")]
+    [SerializeField] private GameObject insructionsPage1;
+    [Tooltip("The second instructions page of the pause menu")]
+    [SerializeField] private GameObject insructionsPage2;
     [Tooltip("The credits page of the pause menu")]
     [SerializeField] private GameObject creditsPage;
 
@@ -25,11 +27,11 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
-        Debug.Log("Resuming");
         if (pauseMenuUI != null)
         {
             mainPage.SetActive(false);
-            insructionsPage.SetActive(false);
+            insructionsPage1.SetActive(false);
+            insructionsPage2.SetActive(false);
             pauseMenuUI.SetActive(false);
             creditsPage.SetActive(false);
         }
@@ -41,9 +43,12 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void Pause()
     {
-        Debug.Log("Pausing");
         if (pauseMenuUI != null)
         {
+            insructionsPage1.SetActive(false);
+            insructionsPage2.SetActive(false);
+            creditsPage.SetActive(false);
+
             mainPage.SetActive(true);
             pauseMenuUI.SetActive(true);
         }
@@ -69,17 +74,30 @@ public class MainMenu : MonoBehaviour
     public void OpenMenuPage()
     {
         mainPage.SetActive(true);
-        insructionsPage.SetActive(false);
+        insructionsPage1.SetActive(false);
+        insructionsPage2.SetActive(false);
         creditsPage.SetActive(false);
     }
 
     /// <summary>
     /// Turns the main page off and opens the controls screen page
     /// </summary>
-    public void OpenInstructionsPage()
+    public void OpenInstructionsPage1()
     {
         mainPage.SetActive(false);
-        insructionsPage.SetActive(true);
+        insructionsPage1.SetActive(true);
+        insructionsPage2.SetActive(false);
+        creditsPage.SetActive(false);
+    }
+
+    /// <summary>
+    /// Turns the main page off and opens the controls screen page
+    /// </summary>
+    public void OpenInstructionsPage2()
+    {
+        mainPage.SetActive(false);
+        insructionsPage1.SetActive(false);
+        insructionsPage2.SetActive(true);
         creditsPage.SetActive(false);
     }
 
@@ -89,16 +107,9 @@ public class MainMenu : MonoBehaviour
     public void OpenCreditsPage()
     {
         mainPage.SetActive(false);
-        insructionsPage.SetActive(false);
+        insructionsPage1.SetActive(false);
+        insructionsPage2.SetActive(false);
         creditsPage.SetActive(true);
-    }
-
-    /// <summary>
-    /// Restarts the current scene. Will be used for when player dies.
-    /// </summary>
-    public void RestartCurrentScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     /// <summary>
