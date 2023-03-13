@@ -26,8 +26,11 @@ public class ToggleRay : MonoBehaviour
 
     public void ActivateRay()
     {
+        Debug.Log("Switching interactor");
         if (!TouchingObject() || forceToggle)
+        {
             SwitchInteractors(true);
+        }
     }
 
     public void DeactivateRay()
@@ -38,7 +41,7 @@ public class ToggleRay : MonoBehaviour
 
     private bool TouchingObject()
     {
-        List<IXRInteractable> targets = new List<IXRInteractable>();
+        List<XRBaseInteractable> targets = new List<XRBaseInteractable>();
         directInteractor.GetValidTargets(targets);
         return (targets.Count > 0);
     }
