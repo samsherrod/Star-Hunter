@@ -26,7 +26,6 @@ public class ToggleRay : MonoBehaviour
 
     public void ActivateRay()
     {
-        Debug.Log("Switching interactor");
         if (!TouchingObject() || forceToggle)
         {
             SwitchInteractors(true);
