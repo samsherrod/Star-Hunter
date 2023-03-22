@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// code taken from https://learn.unity.com/pathway/vr-development
+
 public class HandOffsetManager : MonoBehaviour
 {
     public Vector3 leftHandOffset = Vector3.zero;

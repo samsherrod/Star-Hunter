@@ -2,6 +2,8 @@
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+// code taken from https://learn.unity.com/pathway/vr-development
+
 /// <summary>
 /// Checks for button input on an input action
 /// </summary>

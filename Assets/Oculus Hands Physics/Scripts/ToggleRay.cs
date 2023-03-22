@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+// code taken from https://learn.unity.com/pathway/vr-development
+
 /// <summary>
 /// Toggle between the direct and ray interactor if the direct interactor isn't touching any objects
 /// Should be placed on a ray interactor

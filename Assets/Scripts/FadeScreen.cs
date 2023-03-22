@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Code taken from https://www.youtube.com/watch?v=JCyJ26cIM0Y&t=1122s
+
 public class FadeScreen : MonoBehaviour
 {
     [SerializeField] private bool fadeOnStart = true;
